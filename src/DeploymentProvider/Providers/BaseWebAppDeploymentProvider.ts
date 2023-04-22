@@ -57,7 +57,7 @@ export abstract class BaseWebAppDeploymentProvider implements IWebAppDeploymentP
         core.setOutput('webapp-url', this.applicationURL);
     }
 
-    private async initializeForSPN() {        
+    private async initializeForSPN() {
         this.appService = new AzureAppService(this.actionParams.endpoint, this.actionParams.resourceGroupName, this.actionParams.appName, this.actionParams.slotName);
         this.appServiceUtility = new AzureAppServiceUtility(this.appService);
         
